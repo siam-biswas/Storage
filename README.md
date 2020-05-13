@@ -8,7 +8,7 @@
 ###### Storage is a generic solution for data persistency in swift. As there are multiple ways to store data locally in iOS apps, Storage made it easier for you to use them with one single tool. Currently storage has support to work with UserDefaults, Keychain, FileManager & Plist.
 
 
-# Version 1.0.0
+# Version 1.0.2
 
 
 
