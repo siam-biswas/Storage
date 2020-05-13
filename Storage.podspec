@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "Storage"
-  s.version     = "1.0.0"
+  s.version     = "1.0.1"
   s.summary     = "Elegant way to store data in Swift"
   s.homepage    = "https://github.com/siam-biswas/Storage"
   s.license     = { :type => "MIT" }
