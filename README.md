@@ -1,6 +1,6 @@
 # Storage
 
-[Platform](https://img.shields.io/badge/platforms-iOS%208.0)
+![Platform](https://img.shields.io/badge/platforms-iOS%208.0-F28D00.svg)
 
 
 #### Elegant way to store data in Swift
