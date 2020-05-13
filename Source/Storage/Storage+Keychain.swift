@@ -147,7 +147,7 @@ public class Keychain {
     }
     
     
-    public func getData(for key: String) throws -> Data? {
+    public func getData(for key: String) throws -> Data {
         var query = keychainQueryable.query
         query[String(kSecMatchLimit)] = kSecMatchLimitOne
         query[String(kSecReturnAttributes)] = kCFBooleanTrue
@@ -169,7 +169,7 @@ public class Keychain {
             }
             return data
         case errSecItemNotFound:
-            return nil
+            throw error(from: status)
         default:
             throw error(from: status)
         }
