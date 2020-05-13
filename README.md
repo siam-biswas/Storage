@@ -237,7 +237,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MyApp' do
-    pod 'Storage', :git => 'https://github.com/siam-biswas/Storage.git'
+    pod 'storage', :git => 'https://github.com/siam-biswas/Storage.git'
 end
 ```
 
