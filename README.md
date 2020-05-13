@@ -1,6 +1,10 @@
 # Storage
 
 ![Platform](https://img.shields.io/badge/platforms-iOS%208.0-F28D00.svg)
+![UserDefault](https://img.shields.io/badge/UserDeafult%20-F28D00.svg)
+![Keychain](https://img.shields.io/badge/Keychain%20-F28D00.svg)
+![FileManager](https://img.shields.io/badge/FileManager%20-F28D00.svg)
+![Plist](https://img.shields.io/badge/Plist%20-F28D00.svg)
 
 
 #### Elegant way to store data in Swift
@@ -132,12 +136,6 @@ DataStorage[\.phones] = ["01711223344","93456789"]
 DataStorage.email = "jhon.doe@icloud.com"
 ```
 
-You can also change the default container by set the value for `StorageContainer.default`
-
-```swift
- StorageContainer.default = FileManager.default
-```
-
 ## Codable, NSCoding & RawRepresentable
 
 Storage  support `Codable` ,`NSCoding` &  `RawRepresentable` with all the `Containers` ! Just conform to `Storagable` in your custom type or enum. It also works with array of your custom  types.
@@ -199,14 +197,14 @@ extension Store {
 
 ```swift
 class CustomClass {
-    @StorageWrapper(path: \.username)
+    @StorageWrapper(keyPath: \.username)
     var username: String?
-
-    @StorageWrapper(bucket: Bucket(key: "email", expire: Date(), container: UserDefaults.standard, value: "jhon.doe@icloud.com"))
-    var email: String?
     
     @StorageWrapper(keyPath: \.address, adapter: Storage) 
     var address:String?
+
+    @StorageWrapper(bucket: Bucket(key: "email", expire: Date(), container: UserDefaults.standard, value: "jhon.doe@icloud.com"))
+    var email: String?
 }
 ```
 
@@ -224,7 +222,6 @@ StorageDebug.set(true)
 Get the debug report
 ```swift
 let report = StorageDebug.report
-}
 ```
 
 
