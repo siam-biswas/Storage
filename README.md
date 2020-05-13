@@ -1,5 +1,7 @@
 # Storage
 
+[Platform](https://img.shields.io/badge/platforms-iOS%208.0)
+
 
 #### Elegant way to store data in Swift
 
@@ -237,7 +239,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MyApp' do
-    pod 'storage', :git => 'https://github.com/siam-biswas/Storage.git'
+    pod 'Storage', :git => 'https://github.com/siam-biswas/Storage.git'
 end
 ```
 
